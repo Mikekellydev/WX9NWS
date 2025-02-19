@@ -30,3 +30,28 @@ async function getWeather() {
         document.getElementById('weather-info').innerHTML = "<p>Unable to get weather data. Try again later.</p>";
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Create the base map
+    var map = new ol.Map({
+        target: 'map', // Matches the ID of the div in index.html
+        layers: [
+            // Base layer (OpenStreetMap)
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            }),
+            // NOAA Radar Overlay
+            new ol.layer.Tile({
+                source: new ol.source.XYZ({
+                    url: 'https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/nexrad-n0q-900913/{z}/{x}/{y}.png',
+                    crossOrigin: 'anonymous'
+                })
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([-76.1, 36.8]), // USA Center
+            zoom: 9
+        })
+    });
+});
