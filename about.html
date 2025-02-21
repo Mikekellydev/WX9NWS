@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WX9NWS Weather Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="leaflet.css"> <!-- Leaflet Map Styles -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <meta name="description" content="WX9NWS Weather Page provides live weather updates, radar tracking, and Skywarn reports for the Midwest.">
+    <meta name="keywords" content="weather, Skywarn, radar, weather updates, Midwest">
+    <meta name="author" content="WX9NWS">
+    <script src="leaflet.js"></script> <!-- Leaflet Map JS -->
 </head>
 <body>
-
+    <!-- Header Section -->
     <header id="main-header">
-        <img src="wx9nws-logo.png" alt="WX9NWS Logo">
-        <h1>WX9NWS Weather & Skywarn</h1>
-        <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
-        
-        <nav>
+        <!-- Left Aligned Logo -->
+        <div class="header">
+            <img src="images/WX9NWS LOGO.png" alt="WX9NWS Logo" class="logo">
+            <div class="text">
+                <h1>WX9NWS Weather & Skywarn</h1>
+                <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
+            </div>
+        </div>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -23,3 +32,55 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <section class="about-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/storm-sky.png" alt="WX9NWS - SKYWARN Spotter">
+                    <img src="images/charts-and-coffee.png" alt="WX9NWS - SKYWARN Spotter">
+                </div>
+                <div class="about-text">
+                    <h2>About WX9NWS Weather Page</h2>
+                    <p>Welcome to the WX9NWS Weather Page, your go-to source for <strong>live weather updates, radar tracking, and SKYWARN Spotter resources</strong>. Whether you're a weather enthusiast, a trained storm spotter, or just someone who wants to stay ahead of severe weather, you're in the right place.</p>
+
+                    <h3>Our Mission</h3>
+                    <p>Our goal is to <strong>empower individuals and communities</strong> with accurate weather data, training, and tools to enhance preparedness and safety. As a dedicated SKYWARN Spotter and weather enthusiast, I am committed to providing real-time data, reliable forecasts, and resources to help you <strong>track storms and report severe weather conditions effectively</strong>.</p>
+
+                    <h3>What We Offer</h3>
+                    <ul>
+                        <li>📡 <strong>Live Weather Data & Radar Integration</strong></li>
+                        <li>⛈️ <strong>Severe Weather Alerts Linked to Your Zip Code</strong></li>
+                        <li>🌪️ <strong>SKYWARN Spotter Reports & Tools</strong></li>
+                        <li>📍 <strong>Custom Weather Maps & Location-Based Forecasting</strong></li>
+                        <li>📚 <strong>Training Resources for Weather Enthusiasts & Spotters</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2>My Experience & Dedication</h2>
+            <div class="experience-container">
+                <div class="experience-box">
+                    <h3>SKYWARN Spotter</h3>
+                    <p>As a certified <strong>SKYWARN Spotter</strong>, I report severe weather conditions directly to the National Weather Service to improve forecasting and public safety.</p>
+                </div>
+                <div class="experience-box">
+                    <h3>Amateur Radio Operator</h3>
+                    <p>With a background in <strong>ham radio operations</strong>, I assist in emergency communication networks during severe weather events.</p>
+                </div>
+                <div class="experience-box">
+                    <h3>Community Weather Leader</h3>
+                    <p>I actively engage with <strong>local weather enthusiasts and emergency responders</strong>, ensuring timely updates and weather preparedness.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WX9NWS Weather Page. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

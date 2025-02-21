@@ -1,178 +1,58 @@
-/* 🌍 Global Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* 🌤️ Body Styling */
-body {
-    background: #1e1e2f;
-    color: white;
-    text-align: center;
-}
-
-/* 📌 Navbar */
+/* Navbar Styling */
 .navbar {
-    background: #003366;
-    padding: 15px;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.navbar a {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366;
+    padding: 15px 20px;
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
 }
 
-.navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
+.navbar-logo {
+    height: 50px; /* Make logo smaller */
+    width: auto;
 }
 
-nav {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
+.navbar-title {
+    font-size: 22px;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 15px;
 }
 
-nav ul {
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    gap: 20px; /* Spaces out links */
 }
 
-nav li {
-    margin: 0 15px;
+.navbar-menu ul li {
+    display: inline-block;
 }
 
-nav a {
-    color: #FFD700;
-    font-size: 18px;
+.navbar-menu ul li a {
+    color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #FF4500;
-}
-
-/* ⚠️ Severe Weather Alert */
-#weather-alert {
-    background: #ff0000 !important;
-    color: white !important;
-    font-weight: bold;
-    padding: 12px;
-    margin-top: 15px;
     font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    display: none;
-}
-
-/* 📍 Location Form */
-#location-form {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    width: 50%;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-#zipcode-input {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background: #333;
-    color: white;
-    font-size: 16px;
-}
-
-#submit-btn {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#submit-btn:hover {
-    background: #3399ff;
-}
-
-/* 🔄 Back Button */
-#back-btn {
-    display: none;
-    margin-top: 15px;
     padding: 8px 12px;
-    background: #ff3300;
-    color: white;
-    border: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-menu ul li a:hover {
+    background-color: #0055A4;
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#back-btn:hover {
-    background: #ff6600;
-}
-
-/* 🗺️ Map Container */
-#map-container {
-    max-width: 70%;
-    height: 450px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
-}
-
-/* 🗺️ Map */
-#map {
-    width: 100%;
-    height: 100%;
-    min-height: 400px; /* Ensures it has a visible height */
-    border-radius: 10px;
-    border: 2px solid #0066cc;
-}
-
-/* 📊 Weather Data */
-#weather-container {
-    max-width: 70%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.weather-info {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-    #location-form, #map-container, #weather-container {
-        max-width: 90%;
-    }
-
-    .navbar {
-        flex-direction: column;
-    }
 }

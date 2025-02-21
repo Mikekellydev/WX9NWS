@@ -1,0 +1,26 @@
+/* Ensure the map container has a proper size */
+#map {
+    width: 100%;
+    max-width: 70%;
+    height: 500px;
+    max-height: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid #444;
+}
+
+/* Adjust Leaflet control buttons (Zoom In/Out) */
+.leaflet-control-zoom {
+    background-color: #222;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Style for Leaflet attribution (bottom-right text) */
+.leaflet-control-attribution {
+    font-size: 12px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3px 5px;
+    border-radius: 5px;
+}

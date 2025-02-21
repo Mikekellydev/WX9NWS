@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WX9NWS Weather Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="leaflet.css"> <!-- Leaflet Map Styles -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <meta name="description" content="WX9NWS Weather Page provides live weather updates, radar tracking, and Skywarn reports for the Midwest.">
+    <meta name="keywords" content="weather, Skywarn, radar, weather updates, Midwest">
+    <meta name="author" content="WX9NWS">
+    <script src="leaflet.js"></script> <!-- Leaflet Map JS -->
 </head>
 <body>
-
+    <!-- Header Section -->
     <header id="main-header">
-        <img src="wx9nws-logo.png" alt="WX9NWS Logo">
-        <h1>WX9NWS Weather & Skywarn</h1>
-        <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
-        
-        <nav>
+        <!-- Left Aligned Logo -->
+        <div class="header">
+            <img src="images/WX9NWS LOGO.png" alt="WX9NWS Logo" class="logo">
+            <div class="text">
+                <h1>WX9NWS Weather & Skywarn</h1>
+                <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
+            </div>
+        </div>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -23,3 +32,35 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Contact Page Content -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, please feel free to contact us.</p>
+        <div class="contact-form-container">
+            <form action="submit_form.php" method="post">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
+            <p><i class="fas fa-envelope"></i> Email: info@wx9nws.com</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

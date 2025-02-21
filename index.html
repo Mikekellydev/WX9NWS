@@ -3,73 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WX9NWS Weather Page</title>
+    <title>WX9NWS Weather Dashboard</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <header id="main-header">
-        <img src="wx9nws-logo.png" alt="WX9NWS Logo">
-        <h1>WX9NWS Weather & Skywarn</h1>
-        <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
-        
-        <nav class="navbar">
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <img src="logo.png" alt="Site Logo" class="navbar-logo">
+        <h1 class="navbar-title">SKYWARN Spotter Network</h1>
+        <nav class="navbar-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="skywarn-resources.html">Skywarn-Resources</a></li>
+                <li><a href="Skywarn-resources.html">Skywarn Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <div id="alert-banner" style="display: none; background: red; color: white; padding: 10px; text-align: center;">
-        ⚠️ Severe Weather Alert
-    </div>
+    
     
 
-    <!-- ZIP Code Selection Form -->
-<div id="location-form">
-    <label for="zipcode">Enter ZIP Code:</label>
-    <input type="text" id="zipcode" placeholder="e.g. 60601">
-    <button onclick="handleLocationSelection()">Get Weather</button>
-</div>
-
-<!-- Weather Display (Initially Hidden) -->
-<div id="weather-container" style="display: none;">
-    <button id="back-button" onclick="goBack()">⬅ Back</button>
-    <div id="weather-details"></div>
-    <div id="weather-alerts"></div> <!-- Placeholder for severe weather alerts -->
-</div>
-
-
-    <!-- Map Section -->
-    <section class="map-container">
-        <h2>Live Radar & Skywarn Reports</h2>
-        <div id="map"></div>
-    </section>
-
-    <!-- Skywarn Report Form -->
-    <section id="report-container">
-        <h2>Submit a Skywarn Report</h2>
-        <form id="report-form">
-            <input type="text" id="report-location" placeholder="Latitude, Longitude">
-            <select id="report-type">
-                <option value="Tornado">Tornado</option>
-                <option value="Tornado">Confirmed Funnel Cloud</option>
-                <option value="Hail">Hail</option>
-                <option value="Heavy Rain">Heavy Rain</option>
-                <option value="Wind Damage">Wind Damage</option>
-            </select>
-            <textarea id="report-description" placeholder="Describe the event"></textarea>
-            <button type="submit">Submit Report</button>
+    <!-- Zip Code Form -->
+    <section class="location-form">
+        <h2>Enter Your Zip Code</h2>
+        <form id="zipForm">
+            <input type="text" id="zipCode" placeholder="Enter Zip Code" required>
+            <button type="submit">Get Weather</button>
         </form>
+        <p id="error-message"></p>
     </section>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
-    <script src="leaflet.js"></script>
+    <!-- Weather Alerts Banner -->
+    <section id="weather-alerts" class="alerts-banner hidden">
+        <p><strong>Severe Weather Alert:</strong> <span id="alert-message">No active alerts.</span></p>
+        <a id="alert-link" href="#" target="_blank">View Details</a>
+    </section>
+
+    <!-- Weather Data -->
+    <section id="weather-container" class="hidden">
+        <h2>Current Weather</h2>
+        <div class="weather-details">
+            <p><strong>Location:</strong> <span id="location"></span></p>
+            <p><strong>Temperature:</strong> <span id="temperature"></span>°F</p>
+            <p><strong>Conditions:</strong> <span id="conditions"></span></p>
+        </div>
+        <button id="change-location">Change Location</button>
+    </section>
+
+    <!-- Map & Radar -->
+    <section class="map-container">
+        <h2>Live Radar</h2>
+        <div id="map">
+            <label class="toggle-container">
+                <input type="checkbox" id="spotter-toggle">
+                <span class="toggle-slider"></span>
+                Show Spotter Reports
+            </label>            
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 WX9NWS Weather Page. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
