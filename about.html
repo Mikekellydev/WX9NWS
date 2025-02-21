@@ -3,84 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WX9NWS Weather Page</title>
+    <title>About - SKYWARN Spotter Network</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="leaflet.css"> <!-- Leaflet Map Styles -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <meta name="description" content="WX9NWS Weather Page provides live weather updates, radar tracking, and Skywarn reports for the Midwest.">
-    <meta name="keywords" content="weather, Skywarn, radar, weather updates, Midwest">
-    <meta name="author" content="WX9NWS">
-    <script src="leaflet.js"></script> <!-- Leaflet Map JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="main-header">
-        <!-- Left Aligned Logo -->
-        <div class="header">
-            <img src="images/WX9NWS LOGO.png" alt="WX9NWS Logo" class="logo">
-            <div class="text">
-                <h1>WX9NWS Weather & Skywarn</h1>
-                <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
-            </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-top">
+            <img src="images/WX9NWS LOGO.png" alt="Site Logo" class="navbar-logo">
+            <h1 class="navbar-title">SKYWARN Spotter Network</h1>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skywarn-resources.html">Skywarn-Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-bottom">
+            <h2 class="navbar-subtitle">Live Weather Tracking & Storm Reports</h2>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Skywarn-resources.html">Skywarn Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="about-container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/storm-sky.png" alt="WX9NWS - SKYWARN Spotter">
-                    <img src="images/charts-and-coffee.png" alt="WX9NWS - SKYWARN Spotter">
-                </div>
-                <div class="about-text">
-                    <h2>About WX9NWS Weather Page</h2>
-                    <p>Welcome to the WX9NWS Weather Page, your go-to source for <strong>live weather updates, radar tracking, and SKYWARN Spotter resources</strong>. Whether you're a weather enthusiast, a trained storm spotter, or just someone who wants to stay ahead of severe weather, you're in the right place.</p>
+    <!-- About Section -->
+    <main class="container">
+        <h2>About SKYWARN Spotter Network</h2>
+        <p>Our mission is to provide real-time weather tracking and storm reports for communities across the United States.</p>
 
-                    <h3>Our Mission</h3>
-                    <p>Our goal is to <strong>empower individuals and communities</strong> with accurate weather data, training, and tools to enhance preparedness and safety. As a dedicated SKYWARN Spotter and weather enthusiast, I am committed to providing real-time data, reliable forecasts, and resources to help you <strong>track storms and report severe weather conditions effectively</strong>.</p>
+        <h3>Our Vision</h3>
+        <p>We strive to empower weather enthusiasts and storm spotters with the latest technology to keep their communities safe.</p>
 
-                    <h3>What We Offer</h3>
-                    <ul>
-                        <li>📡 <strong>Live Weather Data & Radar Integration</strong></li>
-                        <li>⛈️ <strong>Severe Weather Alerts Linked to Your Zip Code</strong></li>
-                        <li>🌪️ <strong>SKYWARN Spotter Reports & Tools</strong></li>
-                        <li>📍 <strong>Custom Weather Maps & Location-Based Forecasting</strong></li>
-                        <li>📚 <strong>Training Resources for Weather Enthusiasts & Spotters</strong></li>
-                    </ul>
-                </div>
+        <h3>Meet the Founder</h3>
+        <section class="founder-section">
+            <img src="images/" alt="Founder Image" class="founder-image">
+            <div class="founder-text">
+                <p><strong>Michael D. Kelly</strong> is a dedicated storm spotter, amateur radio operator, and weather enthusiast. With years of experience in meteorology and emergency response, he has built a platform to support SKYWARN spotters nationwide.</p>
+                <p>Michael is also a Skywarn Spotter and a weather advocate, working closely with the National Weather Service to ensure accurate and timely weather reporting.</p>
             </div>
         </section>
 
-        <section class="experience-section">
-            <h2>My Experience & Dedication</h2>
-            <div class="experience-container">
-                <div class="experience-box">
-                    <h3>SKYWARN Spotter</h3>
-                    <p>As a certified <strong>SKYWARN Spotter</strong>, I report severe weather conditions directly to the National Weather Service to improve forecasting and public safety.</p>
-                </div>
-                <div class="experience-box">
-                    <h3>Amateur Radio Operator</h3>
-                    <p>With a background in <strong>ham radio operations</strong>, I assist in emergency communication networks during severe weather events.</p>
-                </div>
-                <div class="experience-box">
-                    <h3>Community Weather Leader</h3>
-                    <p>I actively engage with <strong>local weather enthusiasts and emergency responders</strong>, ensuring timely updates and weather preparedness.</p>
-                </div>
-            </div>
-        </section>
+        <h3>How We Support Weather Enthusiasts & Spotters</h3>
+        <ul class="support-list">
+            <li>🌪️ Providing real-time weather alerts and tracking tools</li>
+            <li>📡 Offering interactive maps with live storm reports</li>
+            <li>📚 Sharing SKYWARN training resources and best practices</li>
+            <li>🛰️ Integrating APRS for real-time spotter updates</li>
+        </ul>
     </main>
-
-    <footer>
-        <p>&copy; 2025 WX9NWS Weather Page. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>

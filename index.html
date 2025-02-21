@@ -3,81 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WX9NWS Weather Dashboard</title>
-    
-    <!-- Stylesheets -->
+    <title>SKYWARN Spotter Network</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Leaflet CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- JavaScript -->
-    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Navbar -->
     <header class="navbar">
-        <img src="images/WX9NWS LOGO.png" alt="Site Logo" class="navbar-logo">
-        <h1 class="navbar-title">SKYWARN Spotter Network</h1>
-        <nav class="navbar-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Skywarn-resources.html">Skywarn Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-top">
+            <img src="logo.png" alt="Site Logo" class="navbar-logo">
+            <h1 class="navbar-title">SKYWARN Spotter Network</h1>
+        </div>
+        <div class="navbar-bottom">
+            <h2 class="navbar-subtitle">Live Weather Tracking & Storm Reports</h2>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Skywarn-resources.html">Skywarn Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    
 
-    <!-- Zip Code Form -->
-    <section class="location-form">
-        <h2>Enter Your Zip Code</h2>
-        <form id="zipForm">
-            <input type="text" id="zipCode" placeholder="Enter Zip Code" required>
-            <button type="submit">Get Weather</button>
-        </form>
-        <p id="error-message"></p>
+    <!-- Weather Section -->
+    <section id="weather-container">
+        <h3>Enter ZIP Code for Weather Info:</h3>
+        <input type="text" id="zipInput" placeholder="Enter ZIP Code">
+        <button onclick="getWeather()">Get Weather</button>
+        <button onclick="resetLocation()">Reset</button>
+        <div id="weather-info"></div>
     </section>
 
-    <!-- Weather Alerts Banner -->
-    <section id="weather-alerts" class="alerts-banner hidden">
-        <p><strong>Severe Weather Alert:</strong> <span id="alert-message">No active alerts.</span></p>
-        <a id="alert-link" href="#" target="_blank">View Details</a>
+    <!-- Weather Alerts -->
+    <section id="weather-alerts">
+        <h3>Severe Weather Alerts</h3>
+        <p id="alert-info">No alerts currently.</p>
     </section>
 
-    <!-- Weather Data -->
-    <section id="weather-container" class="hidden">
-        <h2>Current Weather</h2>
-        <div class="weather-details">
-            <p><strong>Location:</strong> <span id="location"></span></p>
-            <p><strong>Temperature:</strong> <span id="temperature"></span>°F</p>
-            <p><strong>Conditions:</strong> <span id="conditions"></span></p>
-        </div>
-        <button id="change-location">Change Location</button>
+    <!-- Map Section -->
+    <section id="map-container">
+        <h3>Live Radar & Spotter Reports</h3>
+        <div id="map"></div>
+        <button onclick="toggleSpotterReports()">Toggle Spotter Reports</button>
     </section>
 
-    <!-- Map & Radar -->
-    <section class="map-container">
-        <h2>Live Radar</h2>
-        <div id="map">
-            <label class="toggle-container">
-                <input type="checkbox" id="spotter-toggle">
-                <span class="toggle-slider"></span>
-                Show Spotter Reports
-            </label>            
-        </div>
-    </section>
-
-   
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 WX9NWS Weather Page. All Rights Reserved.</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

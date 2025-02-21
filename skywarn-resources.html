@@ -3,71 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WX9NWS Weather Page</title>
+    <title>Skywarn Resources - SKYWARN Spotter Network</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="leaflet.css"> <!-- Leaflet Map Styles -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <meta name="description" content="WX9NWS Weather Page provides live weather updates, radar tracking, and Skywarn reports for the Midwest.">
-    <meta name="keywords" content="weather, Skywarn, radar, weather updates, Midwest">
-    <meta name="author" content="WX9NWS">
-    <script src="leaflet.js"></script> <!-- Leaflet Map JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="main-header">
-        <!-- Left Aligned Logo -->
-        <div class="header">
-            <img src="images/WX9NWS LOGO.png" alt="WX9NWS Logo" class="logo">
-            <div class="text">
-                <h1>WX9NWS Weather & Skywarn</h1>
-                <h2>Providing weather updates and Skywarn reports for the Midwest</h2>
-            </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-top">
+            <img src="logo.png" alt="Site Logo" class="navbar-logo">
+            <h1 class="navbar-title">SKYWARN Spotter Network</h1>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skywarn-resources.html">Skywarn-Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-bottom">
+            <h2 class="navbar-subtitle">Live Weather Tracking & Storm Reports</h2>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Skywarn-resources.html">Skywarn Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="resources">
-            <h2>Training & Reporting</h2>
-            <p>Find official Skywarn Spotter training materials <a href="https://www.weather.gov/SKYWARN">here</a>.</p>
-            <h3>Ham Radio Storm Spotter Training</h3>
-            <p>As a ham radio operator, you play a crucial role in the Skywarn program. Your ability to communicate during severe weather events can help save lives. Here are some resources to help you get started:</p>
-            <ul>
-                <li><a href="https://www.weather.gov/media/owlie/skywarn/SpotterQuickReferenceGuide.pdf">Skywarn Spotter Quick Reference Guide</a></li>
-                <li><a href="https://www.weather.gov/media/owlie/skywarn/SpotterFieldGuide.pdf">Skywarn Spotter Field Guide</a></li>
-                <li><a href="https://www.arrl.org/skywarn">ARRL Skywarn Information</a></li>
-                <li><a href="https://www.weather.gov/media/owlie/skywarn/SpotterReportingCriteria.pdf">Spotter Reporting Criteria</a></li>
-            </ul>
-        </section>
+    <!-- Skywarn Resources Content -->
+    <main class="container">
+        <h2>Skywarn Spotter Resources</h2>
+        <p>Stay informed and be prepared. Below are essential resources for SKYWARN Spotters.</p>
 
-        <!-- Skywarn Report Form -->
-        <section id="report-container">
-            <h2>Submit a Skywarn Report</h2>
-            <form id="report-form">
-                <input type="text" id="report-location" placeholder="Latitude, Longitude">
-                <select id="report-type">
-                    <option value="Tornado">Tornado</option>
-                    <option value="Confirmed Funnel Cloud">Confirmed Funnel Cloud</option>
-                    <option value="Hail">Hail</option>
-                    <option value="Heavy Rain">Heavy Rain</option>
-                    <option value="Wind Damage">Wind Damage</option>
-                </select>
-                <textarea id="report-description" placeholder="Describe the event"></textarea>
-                <button type="submit">Submit Report</button>
-            </form>
+        <section class="resource-list">
+            <div class="resource-item">
+                <h3><a href="https://www.weather.gov/SKYWARN">Official SKYWARN Program</a></h3>
+                <p>Learn about SKYWARN training, reporting guidelines, and more.</p>
+            </div>
+
+            <div class="resource-item">
+                <h3><a href="https://www.weather.gov">Weather.gov</a></h3>
+                <p>Get real-time weather alerts and forecasts directly from the National Weather Service.</p>
+            </div>
+
+            <div class="resource-item">
+                <h3><a href="https://www.aprs.fi">APRS Live Spotter Reports</a></h3>
+                <p>View live storm spotter reports via APRS.</p>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 WX9NWS Weather Page. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
